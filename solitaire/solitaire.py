@@ -102,8 +102,8 @@ class Card(ft.GestureDetector):
 
     def start_drag(self, e: ft.DragStartEvent):
         if self.face_up:
+            self.get_draggable_pile()
             self.move_on_top()
-            self.solitaire.update()
 
     def drag(self, e: ft.DragUpdateEvent):
         if self.face_up:
