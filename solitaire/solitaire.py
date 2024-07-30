@@ -1,4 +1,5 @@
 import random
+
 import flet as ft
 
 CARD_WIDTH = 70
@@ -137,8 +138,12 @@ class Card(ft.GestureDetector):
 
     def turn_face_up(self):
         self.face_up = True
-        print(self.rank.name, self.suite.name)
         self.content.content = ft.Image(src=f"images/{self.rank.name}_{self.suite.name}.svg")
+        self.solitaire.update()
+
+    def turn_face_down(self):
+        self.face_up = False
+        self.content.content = ft.Image(src=f"cards_pics/card_back.jpg")
         self.solitaire.update()
 
     def click(self, e):
