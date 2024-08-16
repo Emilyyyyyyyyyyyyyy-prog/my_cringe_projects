@@ -56,7 +56,7 @@ class Card(ft.GestureDetector):
             width=CARD_WIDTH,
             height=CARD_HEIGHT,
             border_radius=ft.border_radius.all(6),
-            content=ft.Image(src=f"cards_pics/card_back.jpg")
+            content=ft.Image(src=f"images/card_back.jpg")
         )
         self.draggable_pile = [self]
 
@@ -143,7 +143,7 @@ class Card(ft.GestureDetector):
 
     def turn_face_down(self):
         self.face_up = False
-        self.content.content = ft.Image(src=f"cards_pics/card_back.jpg")
+        self.content.content = ft.Image(src=f"images/card_back.jpg")
         self.solitaire.update()
 
     def click(self, e):
