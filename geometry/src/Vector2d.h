@@ -12,6 +12,14 @@ public:
     float getY();
     void setX(float);
     void setY(float);
+
+    Vector2d operator-(Vector2d);
+    Vector2d operator*(float);
+    Vector2d operator+(Vector2d);
+    Vector2d operator+=(Vector2d);
+    Vector2d operator-=(Vector2d) ;
+    Vector2d operator*=(float);
+    Vector2d operator/=(float);
 };
 
 
