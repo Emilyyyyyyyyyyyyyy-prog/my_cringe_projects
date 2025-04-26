@@ -1,0 +1,3 @@
+PyQt5==5.13.2
+pyqt5_tools==5.13.0.1.5
+pymorphy2==0.8
